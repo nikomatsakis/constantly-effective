@@ -1,4 +1,4 @@
-# ~const bounds
+# RFC proposal
 
 This is roughly what is described in the RFC.
 

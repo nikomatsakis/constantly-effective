@@ -36,7 +36,7 @@ where
     T: ~const Default,
 {
     match x {
-        None => <Wrapper<T>>::default(),
+        None => <Wrapper<T>>::default(), // <-- do we need something here?
         Some(v) => v,
     }
 }

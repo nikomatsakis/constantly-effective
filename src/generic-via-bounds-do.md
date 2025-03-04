@@ -1,7 +1,5 @@
 # do bounds
 
-This is roughly what is described in the RFC.
-
 ## TL;DR
 
 ## Design axioms
@@ -30,7 +28,7 @@ where
     }
 }
 
-do fn get_me<T>(x: Option<Wrapper<T>>) -> Wrapper<T>
+const fn get_me<T>(x: Option<Wrapper<T>>) -> Wrapper<T>
 where
     T: do Default,
 {

@@ -7,12 +7,11 @@ In the "generic via bounds" approach, you declare
 
 ## Design axioms
 
-As in the [RFC](./rfc-proposal.md), we wish to ensure
+As in the [RFC proposal](./rfc-proposal.md), we wish to ensure
 
 * The step from a monomorphivc `const fn` to one with a generic bound should be minimal
 
-
-This is appealing because of
+but we also wish 
 
 ## Notes
 

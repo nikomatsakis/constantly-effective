@@ -9,12 +9,12 @@ This is roughly what is described in the RFC.
 
 ## Design axioms
 
-* The step from a monomorphivc `const fn` to one with a generic bound should be minimal.
-    * Therefore, you have `const fn` in both cases but you add `T: ~const Default`.
-* Most traits want to be "all or nothing" (all fns const or no fns const). There isn't much need to have some functions that are always or never const.
-    * There you write `const trait Default { fn default() }` with no indication on `fn default`.
-* Adding `const` to an item be a breaking change.
-    * Note that adding `const` to generic bounds *is* a breaking change.
+* [The step from a monomorphic `const fn` to one with a generic bound should be minimal](./axioms.md#the-step-from-a-monomorphic-const-fn-to-one-with-a-generic-bound-should-be-minimal)
+    * In this proposal, you just add `T: ~const Default`, which is easy to suggest via compiler error.
+* [Most traits want to be "all or nothing" (all fns const or no fns const).](./axioms.md#most-traits-want-to-be-all-or-nothing-all-fns-const-or-no-fns-const)
+    * Therefore you write `const trait Default { fn default() }` with no indication on `fn default`.
+* [Adding `const` to an item should not be a breaking change](./axioms.md#adding-const-to-an-item-should-not-be-a-breaking-change)
+    * In this proposal we extend this rule to include changing to `const trait Foo` and `impl const Foo`.
 
 ## Default trait and impl
 

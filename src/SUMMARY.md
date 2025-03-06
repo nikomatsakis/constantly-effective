@@ -6,6 +6,7 @@
     - [So you want to focus on const only](./so-you-want-to-focus-on-const-only.md)
 - [Stories](./stories.md)
     - [From const to generic](./from-const-to-generic.md)
+- [Design axioms](./axioms.md)
 - [Proposals](./proposals.md)
     - [Formality example](./formality-example.md)
     - [rfc-proposal](./rfc-proposal.md)

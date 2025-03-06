@@ -19,5 +19,6 @@
         - [`do` everywhere](./everywhere-do.md)
         - [`const do` everywhere](./everywhere-const-do.md)
         - [`const+` everywhere](./everywhere-const-plus.md)
+        - [`(const)` everywhere](./everywhere-paren-const.md)
 - [Preferences](./preferences.md)
     - [nikomatsakis](./preferences/nikomatsakis.md)

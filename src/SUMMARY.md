@@ -15,3 +15,5 @@
         - [`~const` everywhere](./everywhere-twiddle-const.md)
         - [`do` everywhere](./everywhere-do.md)
         - [`const+` everywhere](./everywhere-const-plus.md)
+- [Preferences](./preferences.md)
+    - [nikomatsakis](./preferences/nikomatsakis.md)

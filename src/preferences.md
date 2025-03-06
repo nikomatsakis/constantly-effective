@@ -7,7 +7,7 @@ Submitted notes on why people prefer various options. This table summarizes over
 | ---------------- | ------- | ----------------- | ------------------- | --------------- | ------------------- |
 | [nikomatsakis][] | ![no][] | ![no][]           | ![no][]             | ![like][]        | ![like][]            |
 
-[nikomatsakis]: ./proposals/nikomatsakis.md
+[nikomatsakis]: ./preferences/nikomatsakis.md
 
 
 Key:

@@ -64,3 +64,17 @@ There isn't much need to have some functions that are always or never const. If 
 ## Twiddle const is where Rust jumps the shark
 
 There is nothing logical about this one, but I'm sorry `~const` is just not a step too far into sigil territory.
+
+## If we do a general syntax, it should cover all the "quadrants"
+
+We ought to support all the "quadrants"...
+
+* methods that are always const
+* methods that may or may not be const, depending on impl + bounds
+* methods that are always "maybe const", depending on bounds
+
+## Fn items and trait items should mean same thing
+
+If you copy and paste a fn item into a trait, it should (a) work and (b) mean the same thing. If you copy a trait item out to a top-level function, it should either (a) not compile or (b) mean the same thing.
+
+

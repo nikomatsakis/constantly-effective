@@ -73,8 +73,20 @@ see below.
 ## Design axioms
 
 * [The step from a monomorphic `const fn` to one with a generic bound should be minimal](./axioms.md#the-step-from-a-monomorphic-const-fn-to-one-with-a-generic-bound-should-be-minimal)
-    * In this model, you "just add something like `T: (const) Default`"
+* [If we do a general syntax, it should cover all the "quadrants"](./axioms.md#if-we-do-a-general-syntax-it-should-cover-all-the-quadrants)
+* [Fn items and trait items should mean same thing](./axioms.md#fn-items-and-trait-items-should-mean-same-thing)
+* [You should be able to declare a "maybe const" function without understanding effects](./axioms.md#you-should-be-able-to-declare-a-maybe-const-function-without-understanding-effects)
 
+Due to satisfying the last axiom, this design is compatible with either
+
+* [We might never want more complex effects than `const`](./axioms.md#we-might-never-want-more-complex-effects-than-const)
+
+or
+
+* [`const` and `async` should "feel the same"](./axioms.md#const-and-async-should-feel-the-same)
+* [We will want to have more effects than `const`](./axioms.md#we-will-want-to-have-more-effects-than-const)
+* [We will want a "lower floor" than `const`](./axioms.md#we-will-want-a-lower-floor-than-const)
+* [Traits in libstd that becomes a "const trait" will want to be an "async trait" too](./axioms.md#traits-in-libstd-that-becomes-a-const-trait-will-want-to-be-an-async-trait-too)
 
 ## Default trait and impl
 

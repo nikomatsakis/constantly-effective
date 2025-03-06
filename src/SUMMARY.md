@@ -1,11 +1,6 @@
 # Summary
 
 - [Formality](./formality.md)
-- [Choose your own adventure](./choose.md)
-    - [So you want const and async to feel the same](./so-you-want-const-and-async-to-feel-the-same.md)
-    - [So you want to focus on const only](./so-you-want-to-focus-on-const-only.md)
-- [Stories](./stories.md)
-    - [From const to generic](./from-const-to-generic.md)
 - [Design axioms](./axioms.md)
 - [Proposals](./proposals.md)
     - [Formality example](./formality-example.md)

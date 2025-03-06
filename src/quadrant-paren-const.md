@@ -109,7 +109,9 @@ where
     T: (const) Default,
 {
     // When implementing a conditionally const method, you write `(const)`
-    // to indicate that it is "
+    // to indicate that its effects may depend on the impl effect
+    // (just as in the trait). The impl effect here includes the
+    // `T: (const) Default` from the impl header.
     //
     // Variation: We could also have you write `const fn default() -> Self`
     // here. See discussion below.
@@ -125,7 +127,7 @@ where
     T: (const) Default,
 {
     match x {
-        None => <Wrapper<T>>::default(), // <-- do we need something here?
+        None => <Wrapper<T>>::default(),
         Some(v) => v,
     }
 }

@@ -45,3 +45,33 @@ do
     }
 }
 ```
+
+## All the things
+
+This `ATT` trait exercises all the variations.
+
+```rust
+trait ATT {
+    do Effect;
+
+    fn always_const(&self) -> u32
+    do
+        const;
+
+    fn maybe_const(&self) -> u32
+    do
+        (const, <Self as ATT>::Effect);
+
+    fn maybe_maybe_const<T: ATT>(&self) -> u32
+    do
+        (const, <Self as ATT>::Effect, <T as ATT>::Effect);
+
+    fn always_maybe_const<T: ATT>(&self) -> u32
+    do
+        (const, <T as ATT>::Effect);
+}
+```
+
+### ATT Impl A
+
+### ATT Impl B

@@ -17,7 +17,7 @@
 Equivalent of [default trait and impl](./formality-example.md#default-trait-and-impl):
 
 ```rust
-trait (const) Default {
+(const) trait Default {
     (const) fn default() -> Self;
 }
 
@@ -47,3 +47,32 @@ where
 }
 ```
 
+## Variations
+
+I'm not persuaded by putting the `(const)` before the keyword `trait`:
+
+```rust
+(const) trait Default {
+    (const) fn default() -> Self;
+}
+```
+
+It seems inconsistent with how the `impl` works (`impl (const) Default`) and how bounds work ()`T: const Default`). I would therefore expect the following:
+
+```rust
+trait (const) Default {
+    (const) fn default() -> Self;
+}
+```
+
+Question though, what does it mean to write `(const)` anyway? It indicates the "floor" for default functions? But that is indicated on a per-function basis.
+
+Another option is to just say that the trait is "generic over const" if it has methods that are; that has a downside in that it rules out the ability to have a trait that has "just" a `(const) fn` method:
+
+```rust
+trait Default {
+    (const) fn foo<T: (const) Debug>() -> Self;
+}
+```
+
+All of this makes me wonder if we can come up with a syntax for more explicitly "tying" things together, but I'm not sure what it would be. For example `(trait)` or `(fn)` or even `const(if trait)`...? Or `T: (fn) Debug`, which would mean "add this to the effects of the function"...?

@@ -1,5 +1,9 @@
 # nikomatsakis
 
+I am pretty keen on the [quadrant `(const)`](../quadrant-paren-const.md) syntax and semantics, which seems to cover all the bases. The rationale below is mostly accurate but not fully updated with latest thoughts.
+
+## outdated:
+
 I haven't seen a proposal I truly *like* yet, but I do have some thoughts. The first is that I believe
 
 * [`const` and `async` should "feel the same"](../axioms.md#const-and-async-should-feel-the-same)

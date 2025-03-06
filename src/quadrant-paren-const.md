@@ -196,7 +196,7 @@ trait ATT {
     // const in all impls:
     const fn always_const(&self) -> u32;
 
-    // const if declared in impl as const≈g
+    // const if declared in impl as const
     (const) fn maybe_const(&self) -> u32;
 
     // const if (a) declared in impl as const and (b) methods in `T: ATT` impl are const
@@ -205,4 +205,4 @@ trait ATT {
     // includes effects from `T`
     const fn always_maybe_const<T: (const) ATT>(&self) -> u32;
 }
-```≈g
+```

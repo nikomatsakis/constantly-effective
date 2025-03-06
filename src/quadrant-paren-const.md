@@ -76,6 +76,7 @@ see below.
 * [If we do a general syntax, it should cover all the "quadrants"](./axioms.md#if-we-do-a-general-syntax-it-should-cover-all-the-quadrants)
 * [Fn items and trait items should mean same thing](./axioms.md#fn-items-and-trait-items-should-mean-same-thing)
 * [You should be able to declare a "maybe const" function without understanding effects](./axioms.md#you-should-be-able-to-declare-a-maybe-const-function-without-understanding-effects)
+* [Twiddle const is where Rust jumps the shark](./axioms.md#twiddle-const-is-where-rust-jumps-the-shark)
 
 Due to satisfying the last axiom, this design is compatible with either
 
@@ -87,6 +88,7 @@ or
 * [We will want to have more effects than `const`](./axioms.md#we-will-want-to-have-more-effects-than-const)
 * [We will want a "lower floor" than `const`](./axioms.md#we-will-want-a-lower-floor-than-const)
 * [Traits in libstd that becomes a "const trait" will want to be an "async trait" too](./axioms.md#traits-in-libstd-that-becomes-a-const-trait-will-want-to-be-an-async-trait-too)
+
 
 ## Default trait and impl
 

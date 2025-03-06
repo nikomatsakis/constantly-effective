@@ -4,24 +4,27 @@
 
 ## Design axioms
 
+* [Twiddle const is where Rust jumps the shark](./axioms.md#twiddle-const-is-where-rust-jumps-the-shark)
+    * Therefore we use `do`
+
 ## Default trait and impl
 
 Equivalent of [default trait and impl](./formality-example.md#default-trait-and-impl):
 
 ```rust
-do trait Default {
-    do fn default() -> Self;
+const trait Default {
+    fn default() -> Self;
 }
 
 struct Wrapper<T> {
     value: T
 }
 
-impl<T> do Default for Wrapper<T>
+impl<T> const Default for Wrapper<T>
 where
-    T: do Default,
+    T: const Default,
 {
-    do fn default() -> Self {
+    const fn default() -> Self {
         Wrapper {
             value: T::default()
         }

@@ -26,11 +26,22 @@ They are more similar than they are different -- `const` lets you work in `const
 
 When you see `const fn` (or any other const item), it should mean that you can use the thing in a `const` block. Not that you can "maybe" use the thing in a const block.
 
+One reason to favor this axiom is if you think about having "must be const" methods in a const trait...
+
+```rust
+const trait Foo {
+    const fn foo();
+    fn bar();
+}
+```
+
+...the fact that
+
 ## We will want to have more effects than `const`
 
 We already see the need to have (e.g.) `async Fn` and `const Fn` -- and most any trait that could be `const` could as well be `async`.
 
-## Most very trait in libstd that becomes a "const trait" will want to be an "async trait" too
+## Traits in libstd that becomes a "const trait" will want to be an "async trait" too
 
  We know we want `const Default`, but why not `async Default`? And for those where you don't want it (`async Sized`, for example), it doesn't have to have it be possible to write.
  
@@ -50,7 +61,6 @@ Effects are kind of complex to think about. Regardless of how things work it'd b
 
 There isn't much need to have some functions that are always or never const. If you really need it, you can break up the trait into supertraits.
 
+## Twiddle const is where Rust jumps the shark
 
-
-
-
+There is nothing logical about this one, but I'm sorry `~const` is just not a step too far into sigil territory.

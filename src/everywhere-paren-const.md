@@ -1,9 +1,9 @@
-# `const+` everywhere
+# `(const)` everywhere
 
 ## TL;DR
 
 * Write `const` to mean "can only do const things"
-* Write `const+` to mean "can only directly do const things, but may do non-const things via trait bounds"
+* Write `(const)` to mean "can only directly do const things, but may do non-const things via trait bounds"
 
 ## Design axioms
 
@@ -17,28 +17,28 @@
 Equivalent of [default trait and impl](./formality-example.md#default-trait-and-impl):
 
 ```rust
-const+ trait Default {
-    const+ fn default() -> Self;
+trait (const) Default {
+    (const) fn default() -> Self;
 }
 
 struct Wrapper<T> {
     value: T
 }
 
-impl<T> const+ Default for Wrapper<T>
+impl<T> Default for Wrapper<T>
 where
-    T: const+ Default,
+    T: (const) Default,
 {
-    const+ fn default() -> Self {
+    (const) fn default() -> Self {
         Wrapper {
             value: T::default()
         }
     }
 }
 
-const+ fn get_me<T>(x: Option<Wrapper<T>>) -> Wrapper<T>
+(const) fn get_me<T>(x: Option<Wrapper<T>>) -> Wrapper<T>
 where
-    T: const+ Default,
+    T: (const) Default,
 {
     match x {
         None => <Wrapper<T>>::default(), // <-- do we need something here?
